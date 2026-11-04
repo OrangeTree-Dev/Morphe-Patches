@@ -1,3 +1,18 @@
+## 1.0.0 (2026-11-04)
+
+### ✨ New Features
+
+* Add AI tags patch for YouTube Music ([50984a1](https://github.com/OrangeTree-Dev/Morphe-Patches/commit/50984a1a69c3594050dea37d80d1b3d6b1cb4b46))
+* Short "AI" tag at the start of the artist line ([8f646ed](https://github.com/OrangeTree-Dev/Morphe-Patches/commit/8f646edfbfa61691b19552baf183a50d33e00d3c))
+
+### 🐛 Bug Fixes
+
+* Add on-screen status messages for diagnosing missing tags ([37649e3](https://github.com/OrangeTree-Dev/Morphe-Patches/commit/37649e364de9ca9579376124951e2a0a5dd0d3eb))
+* Remove personal name from bundle info and README ([b7618be](https://github.com/OrangeTree-Dev/Morphe-Patches/commit/b7618be4b127398047c3e178e4dc180258933c8f))
+* Rename bundle to OrangeTree Patches ([cf66393](https://github.com/OrangeTree-Dev/Morphe-Patches/commit/cf663935ed49011328da6a0a8e59b9bcf4cc0a1c))
+* Rename patch to YouTube Music AI Tagger ([783ab52](https://github.com/OrangeTree-Dev/Morphe-Patches/commit/783ab528263d7aef0eeb2fc29df9590571dad3a6))
+* Turn off the test status pop-ups ([3d84fea](https://github.com/OrangeTree-Dev/Morphe-Patches/commit/3d84fea20204768aa6b815501a7bd351bbbf32bb))
+
 ## [1.0.0-dev.4](https://github.com/OrangeTree-Dev/Morphe-Patches/compare/v1.0.0-dev.3...v1.0.0-dev.4) (2026-11-04)
 
 ### 🐛 Bug Fixes
