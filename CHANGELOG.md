@@ -1,3 +1,9 @@
+## [1.0.0-dev.2](https://github.com/OrangeTree-Dev/Morphe-Patches/compare/v1.0.0-dev.1...v1.0.0-dev.2) (2026-11-04)
+
+### 🐛 Bug Fixes
+
+* Add on-screen status messages for diagnosing missing tags ([37649e3](https://github.com/OrangeTree-Dev/Morphe-Patches/commit/37649e364de9ca9579376124951e2a0a5dd0d3eb))
+
 ## 1.0.0-dev.1 (2026-11-04)
 
 ### ✨ New Features
