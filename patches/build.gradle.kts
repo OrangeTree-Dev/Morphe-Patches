@@ -4,10 +4,10 @@ patches {
     about {
         name = "OrangeTree YT Music AI Tag Patches"
         description = "Shows AI-use tags on YouTube Music songs"
-        source = "git@github.com:OrangeTree-Dev/Morphe-YTMusic-Made-With-AI-Tag.git"
+        source = "git@github.com:OrangeTree-Dev/Morphe-Patches.git"
         author = "OrangeTree"
-        contact = "https://github.com/OrangeTree-Dev/Morphe-YTMusic-Made-With-AI-Tag/issues"
-        website = "https://github.com/OrangeTree-Dev/Morphe-YTMusic-Made-With-AI-Tag"
+        contact = "https://github.com/OrangeTree-Dev/Morphe-Patches/issues"
+        website = "https://github.com/OrangeTree-Dev/Morphe-Patches"
         license = "GPLv3"
     }
 }

@@ -1,4 +1,4 @@
-# 🏷️ YT Music AI Tag Patches
+# 🏷️ YouTube Music AI Tagger
 
 Unofficial Morphe patches for YouTube Music that tag songs by artists on the community AI-artist list
 ([CennoxX/spotify-ai-blocker](https://github.com/CennoxX/spotify-ai-blocker)) with a blue
@@ -9,9 +9,9 @@ The list is downloaded on first launch and refreshed every 24 hours.
 
 ### How to use these patches
 
-Add this repo url to Morphe Manager (Sources > +): https://github.com/OrangeTree-Dev/Morphe-YTMusic-Made-With-AI-Tag
+Tap the button below on your phone, or add this repo url in Morphe Manager under Sources > +: https://github.com/OrangeTree-Dev/Morphe-Patches
 
-<a href="https://morphe.software/add-source?github=OrangeTree-Dev/Morphe-YTMusic-Made-With-AI-Tag">
+<a href="https://morphe.software/add-source?github=OrangeTree-Dev/Morphe-Patches">
   <img src=".github/assets/add-to-morphe.svg" alt="Add to Morphe" height="48">
 </a>
 
