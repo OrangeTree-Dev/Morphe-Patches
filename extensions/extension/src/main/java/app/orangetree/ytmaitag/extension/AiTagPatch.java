@@ -7,10 +7,13 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.graphics.Typeface;
+import android.os.Handler;
+import android.os.Looper;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.ReplacementSpan;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -26,6 +29,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Locale;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Pattern;
 
 /**
@@ -61,10 +65,29 @@ public final class AiTagPatch {
         }
     };
 
+    // Diagnostics, shown as toasts while the patch is being tested.
+    private static final boolean DIAGNOSTICS = true;
+    private static final AtomicInteger lithoCalls = new AtomicInteger();
+    private static final AtomicInteger viewCalls = new AtomicInteger();
+    private static final AtomicInteger tagged = new AtomicInteger();
+    private static volatile String listStatus = "loading";
+
     private AiTagPatch() {
     }
 
-    // ---------------------------------------------------------------- hook
+    // ---------------------------------------------------------------- hooks
+
+    /** Litho text components. */
+    public static CharSequence onLithoText(CharSequence text) {
+        lithoCalls.incrementAndGet();
+        return onText(text);
+    }
+
+    /** YouTubeTextView.setText(). */
+    public static CharSequence onViewText(CharSequence text) {
+        viewCalls.incrementAndGet();
+        return onText(text);
+    }
 
     public static CharSequence onText(CharSequence text) {
         try {
@@ -90,6 +113,7 @@ public final class AiTagPatch {
             int start = out.length();
             out.append(COMMUNITY_TAG);
             out.setSpan(new TagSpan(COMMUNITY_COLOR), start, out.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            tagged.incrementAndGet();
             return out;
         } catch (Throwable t) {
             Log.e(TAG, "onText failure", t);
@@ -145,16 +169,36 @@ public final class AiTagPatch {
         Thread t = new Thread(AiTagPatch::loadList, "YTMAiTag-list");
         t.setDaemon(true);
         t.start();
+        if (DIAGNOSTICS) {
+            Handler main = new Handler(Looper.getMainLooper());
+            main.postDelayed(AiTagPatch::showStatus, 8000);
+            main.postDelayed(AiTagPatch::showStatus, 30000);
+        }
+    }
+
+    private static void showStatus() {
+        try {
+            Context context = getContext();
+            if (context == null) return;
+            String msg = "AI Tagger: list " + listStatus
+                    + "\ntexts checked: " + lithoCalls.get() + " litho, " + viewCalls.get() + " views"
+                    + "\ntags added: " + tagged.get();
+            Toast.makeText(context, msg, Toast.LENGTH_LONG).show();
+        } catch (Throwable t) {
+            Log.e(TAG, "showStatus failure", t);
+        }
     }
 
     private static void loadList() {
         try {
             Context context = getContext();
+            if (context == null) listStatus = "error: no app context";
             File cache = context == null ? null : new File(context.getFilesDir(), CACHE_FILE);
 
             if (cache != null && cache.exists()) {
                 setList(parseCsv(readAll(new FileInputStream(cache))));
                 Log.i(TAG, "Artist list from cache: " + artists.size());
+                listStatus = artists.size() + " artists (cached)";
                 if (System.currentTimeMillis() - cache.lastModified() < LIST_MAX_AGE_MS) return;
             }
 
@@ -164,15 +208,18 @@ public final class AiTagPatch {
             try {
                 if (conn.getResponseCode() != 200) {
                     Log.w(TAG, "List download failed: " + conn.getResponseCode());
+                    if (artists.isEmpty()) listStatus = "download failed: HTTP " + conn.getResponseCode();
                     return;
                 }
                 String csv = readAll(conn.getInputStream());
                 if (!csv.startsWith("artist")) {
                     Log.w(TAG, "List download returned unexpected content");
+                    if (artists.isEmpty()) listStatus = "download failed: unexpected content";
                     return;
                 }
                 setList(parseCsv(csv));
                 Log.i(TAG, "Artist list downloaded: " + artists.size());
+                listStatus = artists.size() + " artists (downloaded)";
                 if (cache != null) {
                     try (FileOutputStream fos = new FileOutputStream(cache)) {
                         fos.write(csv.getBytes(StandardCharsets.UTF_8));
@@ -183,6 +230,7 @@ public final class AiTagPatch {
             }
         } catch (Throwable t) {
             Log.e(TAG, "loadList failure", t);
+            if (artists.isEmpty()) listStatus = "error: " + t;
         }
     }
 

@@ -35,7 +35,7 @@ val aiTagPatch = bytecodePatch(
                     addInstructionsAtControlFlowLabel(
                         index,
                         """
-                            invoke-static/range { v$register .. v$register }, $EXTENSION_CLASS->onText(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+                            invoke-static/range { v$register .. v$register }, $EXTENSION_CLASS->onLithoText(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
                             move-result-object v$register
                         """
                     )
@@ -46,7 +46,7 @@ val aiTagPatch = bytecodePatch(
         YouTubeTextViewSetTextFingerprint.method.addInstructions(
             0,
             """
-                invoke-static { p1 }, $EXTENSION_CLASS->onText(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+                invoke-static { p1 }, $EXTENSION_CLASS->onViewText(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
                 move-result-object p1
             """
         )
