@@ -1,3 +1,9 @@
+## [1.0.0-dev.4](https://github.com/OrangeTree-Dev/Morphe-Patches/compare/v1.0.0-dev.3...v1.0.0-dev.4) (2026-11-04)
+
+### 🐛 Bug Fixes
+
+* Turn off the test status pop-ups ([3d84fea](https://github.com/OrangeTree-Dev/Morphe-Patches/commit/3d84fea20204768aa6b815501a7bd351bbbf32bb))
+
 ## [1.0.0-dev.3](https://github.com/OrangeTree-Dev/Morphe-Patches/compare/v1.0.0-dev.2...v1.0.0-dev.3) (2026-11-04)
 
 ### ✨ New Features
