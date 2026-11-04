@@ -1,3 +1,9 @@
+## [1.0.0-dev.3](https://github.com/OrangeTree-Dev/Morphe-Patches/compare/v1.0.0-dev.2...v1.0.0-dev.3) (2026-11-04)
+
+### ✨ New Features
+
+* Short "AI" tag at the start of the artist line ([8f646ed](https://github.com/OrangeTree-Dev/Morphe-Patches/commit/8f646edfbfa61691b19552baf183a50d33e00d3c))
+
 ## [1.0.0-dev.2](https://github.com/OrangeTree-Dev/Morphe-Patches/compare/v1.0.0-dev.1...v1.0.0-dev.2) (2026-11-04)
 
 ### 🐛 Bug Fixes

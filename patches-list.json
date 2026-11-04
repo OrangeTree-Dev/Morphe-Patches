@@ -1,10 +1,10 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.0.0-dev.2",
+  "version": "1.0.0-dev.3",
   "patches": [
     {
       "name": "YouTube Music AI Tagger",
-      "description": "Adds a \"COMMUNITY NOTED AI USE\" tag next to artists on the community AI-artist list (github.com/CennoxX/spotify-ai-blocker), in song rows, cards, the mini player and Now Playing.",
+      "description": "Adds a blue \"AI\" tag to songs by artists on the community AI-artist list (github.com/CennoxX/spotify-ai-blocker), in song rows, cards, the mini player and Now Playing.",
       "default": true,
       "category": null,
       "compatiblePackages": [
