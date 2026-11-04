@@ -3,7 +3,7 @@ group = "app.orangetree.ytmaitag"
 patches {
     about {
         name = "OrangeTree Patches"
-        description = "Custom Morphe patches by OrangeTree"
+        description = "Custom patches for Morphe"
         source = "git@github.com:OrangeTree-Dev/Morphe-Patches.git"
         author = "OrangeTree"
         contact = "https://github.com/OrangeTree-Dev/Morphe-Patches/issues"

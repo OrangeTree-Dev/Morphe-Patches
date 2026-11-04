@@ -1,6 +1,6 @@
 # 🍊 OrangeTree Patches
 
-Custom [Morphe](https://morphe.software) patches by OrangeTree.
+Custom patches for [Morphe](https://morphe.software).
 
 > Unofficial. Not affiliated with Morphe, YouTube or Google.
 
