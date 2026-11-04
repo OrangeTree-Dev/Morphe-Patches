@@ -13,7 +13,7 @@ private const val EXTENSION_CLASS = "Lapp/orangetree/ytmaitag/extension/AiTagPat
 
 @Suppress("unused")
 val aiTagPatch = bytecodePatch(
-    name = "AI tags",
+    name = "YouTube Music AI Tagger",
     description = "Adds a \"COMMUNITY NOTED AI USE\" tag next to artists on the community AI-artist list " +
             "(github.com/CennoxX/spotify-ai-blocker), in song rows, cards, the mini player and Now Playing.",
     default = true
