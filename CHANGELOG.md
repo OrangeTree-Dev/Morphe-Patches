@@ -1,3 +1,15 @@
+## 1.0.0-dev.1 (2026-11-04)
+
+### ✨ New Features
+
+* Add AI tags patch for YouTube Music ([50984a1](https://github.com/OrangeTree-Dev/Morphe-Patches/commit/50984a1a69c3594050dea37d80d1b3d6b1cb4b46))
+
+### 🐛 Bug Fixes
+
+* Remove personal name from bundle info and README ([b7618be](https://github.com/OrangeTree-Dev/Morphe-Patches/commit/b7618be4b127398047c3e178e4dc180258933c8f))
+* Rename bundle to OrangeTree Patches ([cf66393](https://github.com/OrangeTree-Dev/Morphe-Patches/commit/cf663935ed49011328da6a0a8e59b9bcf4cc0a1c))
+* Rename patch to YouTube Music AI Tagger ([783ab52](https://github.com/OrangeTree-Dev/Morphe-Patches/commit/783ab528263d7aef0eeb2fc29df9590571dad3a6))
+
 ## [1.0.0-dev.3](https://github.com/OrangeTree-Dev/Morphe-Patches/compare/v1.0.0-dev.2...v1.0.0-dev.3) (2026-11-04)
 
 ### 🐛 Bug Fixes
