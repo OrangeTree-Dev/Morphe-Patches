@@ -2,8 +2,8 @@ group = "app.orangetree.ytmaitag"
 
 patches {
     about {
-        name = "YouTube Music AI Tagger"
-        description = "Tags songs by AI artists in YouTube Music"
+        name = "OrangeTree Patches"
+        description = "Custom Morphe patches by OrangeTree"
         source = "git@github.com:OrangeTree-Dev/Morphe-Patches.git"
         author = "OrangeTree"
         contact = "https://github.com/OrangeTree-Dev/Morphe-Patches/issues"

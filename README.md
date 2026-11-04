@@ -1,11 +1,24 @@
-# 🏷️ YouTube Music AI Tagger
+# 🍊 OrangeTree Patches
 
-A [Morphe](https://morphe.software) patch for the YouTube Music Android app that tags songs made by AI artists,
-so you can see at a glance what you're listening to.
+Custom [Morphe](https://morphe.software) patches by OrangeTree.
 
 > Unofficial. Not affiliated with Morphe, YouTube or Google.
 
-## ❓ About
+## 📲 How to use these patches
+
+Tap the button below on your phone, or open Morphe Manager and add `https://github.com/OrangeTree-Dev/Morphe-Patches` under **Sources > +**.
+
+<a href="https://morphe.software/add-source?github=OrangeTree-Dev/Morphe-Patches">
+  <img src=".github/assets/add-to-morphe.svg" alt="Add to Morphe" height="48">
+</a>
+
+Pre-release (dev) builds: enable pre-releases for this source in Morphe Manager.
+
+## 🧩 Patches
+
+### 🏷️ YouTube Music AI Tagger
+
+Tags songs made by AI artists in the YouTube Music app, so you can see at a glance what you're listening to.
 
 YouTube Music only shows its own AI label in a few places. This patch adds a clear tag everywhere a song shows up:
 
@@ -16,6 +29,8 @@ YouTube Music only shows its own AI label in a few places. This patch adds a cle
 
 When both apply, only the YouTube tag is shown.
 
+#### Details
+
 **Where the tag shows:** next to the artist name in song rows, playlists, cards and shelves, the queue, the mini player and the Now Playing screen.
 
 **Where the data comes from:** the community list is
@@ -23,21 +38,13 @@ When both apply, only the YouTube tag is shown.
 It's downloaded the first time the app opens and refreshed every 24 hours. Nothing else is sent anywhere.
 If an artist is wrongly listed or missing, report it to that project.
 
-## 📲 How to install
+#### Setup
 
-1. Tap the button below on your phone, or open Morphe Manager and add `https://github.com/OrangeTree-Dev/Morphe-Patches` under **Sources > +**.
-
-   <a href="https://morphe.software/add-source?github=OrangeTree-Dev/Morphe-Patches">
-     <img src=".github/assets/add-to-morphe.svg" alt="Add to Morphe" height="48">
-   </a>
-
-2. Patch **YouTube Music 9.30.53** and enable **YouTube Music AI Tagger** together with the official Morphe
+1. Patch **YouTube Music 9.30.53** and enable **YouTube Music AI Tagger** together with the official Morphe
    YouTube Music patches (they're needed for signing in).
-3. Install and open the app. Tags appear once the artist list has downloaded, which takes a few seconds on first launch.
+2. Install and open the app. Tags appear once the artist list has downloaded, which takes a few seconds on first launch.
 
-Pre-release (dev) builds: enable pre-releases for this source in Morphe Manager.
-
-## 🩹 Patches list
+## 🩹 Full patch list
 
 <!-- PATCHES_START EXPANDED -->
 > **[v1.0.0-dev.2](https://github.com/OrangeTree-Dev/Morphe-Patches/releases/tag/v1.0.0-dev.2)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;1 patches total
@@ -62,7 +69,7 @@ Pre-release (dev) builds: enable pre-releases for this source in Morphe Manager.
 
 ## 🐛 Issues
 
-Found a bug or a screen where tags don't show? [Open an issue](https://github.com/OrangeTree-Dev/Morphe-Patches/issues).
+Found a bug, or have an idea for a patch? [Open an issue](https://github.com/OrangeTree-Dev/Morphe-Patches/issues).
 
 ## 🛠️ Building
 
