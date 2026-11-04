@@ -1,20 +1,21 @@
-# 👋🧩 Morphe Patches template
+# 🏷️ YT Music AI Tag Patches
 
-Template repository for Morphe Patches.
+Unofficial Morphe patches for YouTube Music that tag songs by artists on the community AI-artist list
+([CennoxX/spotify-ai-blocker](https://github.com/CennoxX/spotify-ai-blocker)) with a blue
+**COMMUNITY NOTED AI USE** tag. Not affiliated with Morphe or YouTube.
 
-## ❓ About
-
-Patches for apps I like.
-
-<!-- TODO: Update this about section with a brief introduction/summary about this repo and what it offers. -->
+The tag shows next to the artist name in song rows, cards, the mini player and the Now Playing screen.
+The list is downloaded on first launch and refreshed every 24 hours.
 
 ### How to use these patches
 
-Click the button below, or manually add this repo url to Morphe Manager: https://github.com/xyz-user/xyz-patches
+Add this repo url to Morphe Manager (Sources > +): https://github.com/OrangeTree-Dev/Morphe-YTMusic-Made-With-AI-Tag
 
-<a href="https://morphe.software/add-source?github=xyz-user/xyz-patches">
+<a href="https://morphe.software/add-source?github=OrangeTree-Dev/Morphe-YTMusic-Made-With-AI-Tag">
   <img src=".github/assets/add-to-morphe.svg" alt="Add to Morphe" height="48">
 </a>
+
+Apply it together with the official Morphe YouTube Music patches (for sign-in support) on YouTube Music 9.30.53.
 
 ## 🩹 Patches list
 

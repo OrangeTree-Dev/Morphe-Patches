@@ -1,14 +1,13 @@
-group = "app.template"
+group = "app.orangetree.ytmaitag"
 
 patches {
-    // TODO: Update this section with your project details.
     about {
-        name = "UserXYZ Patches"
-        description = "Patches for apps I like"
-        source = "git@github.com:UserXYZ/morphe-patches.git"
-        author = "Awesome dev"
-        contact = "na"
-        website = "na"
+        name = "OrangeTree YT Music AI Tag Patches"
+        description = "Shows AI-use tags on YouTube Music songs"
+        source = "git@github.com:OrangeTree-Dev/Morphe-YTMusic-Made-With-AI-Tag.git"
+        author = "OrangeTree"
+        contact = "https://github.com/OrangeTree-Dev/Morphe-YTMusic-Made-With-AI-Tag/issues"
+        website = "https://github.com/OrangeTree-Dev/Morphe-YTMusic-Made-With-AI-Tag"
         license = "GPLv3"
     }
 }
