@@ -73,7 +73,9 @@
             "path": "patches/build/libs/patches-!(*sources*|*javadoc*).mpp?(.asc)"
           }
         ],
-        "successComment": false
+        "successComment": false,
+        "releasedLabels": false,
+        "failComment": false
       }
     ],
     [

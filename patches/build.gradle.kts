@@ -1,14 +1,13 @@
-group = "app.template"
+group = "app.orangetree.ytmaitag"
 
 patches {
-    // TODO: Update this section with your project details.
     about {
-        name = "UserXYZ Patches"
-        description = "Patches for apps I like"
-        source = "git@github.com:UserXYZ/morphe-patches.git"
-        author = "Awesome dev"
-        contact = "na"
-        website = "na"
+        name = "OrangeTree Patches"
+        description = "Custom patches for Morphe"
+        source = "git@github.com:OrangeTree-Dev/Morphe-Patches.git"
+        author = "OrangeTree"
+        contact = "https://github.com/OrangeTree-Dev/Morphe-Patches/issues"
+        website = "https://github.com/OrangeTree-Dev/Morphe-Patches"
         license = "GPLv3"
     }
 }

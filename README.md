@@ -23,7 +23,7 @@ Pre-release (dev) builds: enable pre-releases for this source in Morphe Manager.
 ## 🎯 Supported app versions
 
 <!-- PATCHES_START EXPANDED -->
-> **[v1.0.0-dev.1](https://github.com/OrangeTree-Dev/Morphe-Patches/releases/tag/v1.0.0-dev.1)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;1 patches total
+> **[v1.0.0-dev.4](https://github.com/OrangeTree-Dev/Morphe-Patches/releases/tag/v1.0.0-dev.4)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;1 patches total
 <details open>
 <summary>📦 YouTube Music&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>
@@ -37,7 +37,7 @@ Pre-release (dev) builds: enable pre-releases for this source in Morphe Manager.
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
 |----------|----------------|-----------|
-| [YouTube Music AI Tagger](#youtube-music-ai-tagger) | Adds a "COMMUNITY NOTED AI USE" tag next to artists on the community AI-artist list (github.com/CennoxX/spotify-ai-blocker), in song rows, cards, the mini player and Now Playing. |  |
+| [YouTube Music AI Tagger](#youtube-music-ai-tagger) | Adds a blue "AI" tag to songs by artists on the community AI-artist list (github.com/CennoxX/spotify-ai-blocker), in song rows, cards, the mini player and Now Playing. |  |
 
 </details>
 
