@@ -44,7 +44,9 @@ jobs:
           MORPHE_SIGNING_KEY: ${{ secrets.MORPHE_SIGNING_KEY }}
 
       - name: Attest
-        if: steps.release.outputs.new_release_published == 'true'
+        # Build attestations are only available for public repositories.
+        if: steps.release.outputs.new_release_published == 'true' && !github.event.repository.private
+        continue-on-error: true
         uses: actions/attest-build-provenance@v4
         with:
           subject-name: 'Morphe Patches ${{ steps.release.outputs.new_release_git_tag }}'
