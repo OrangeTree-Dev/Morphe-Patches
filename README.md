@@ -1,21 +1,41 @@
 # 🏷️ YouTube Music AI Tagger
 
-Unofficial Morphe patches for YouTube Music that tag songs by artists on the community AI-artist list
-([CennoxX/spotify-ai-blocker](https://github.com/CennoxX/spotify-ai-blocker)) with a blue
-**COMMUNITY NOTED AI USE** tag. Not affiliated with Morphe or YouTube.
+A [Morphe](https://morphe.software) patch for the YouTube Music Android app that tags songs made by AI artists,
+so you can see at a glance what you're listening to.
 
-The tag shows next to the artist name in song rows, cards, the mini player and the Now Playing screen.
-The list is downloaded on first launch and refreshed every 24 hours.
+> Unofficial. Not affiliated with Morphe, YouTube or Google.
 
-### How to use these patches
+## ❓ About
 
-Tap the button below on your phone, or add this repo url in Morphe Manager under Sources > +: https://github.com/OrangeTree-Dev/Morphe-Patches
+YouTube Music only shows its own AI label in a few places. This patch adds a clear tag everywhere a song shows up:
 
-<a href="https://morphe.software/add-source?github=OrangeTree-Dev/Morphe-Patches">
-  <img src=".github/assets/add-to-morphe.svg" alt="Add to Morphe" height="48">
-</a>
+| Tag | Meaning |
+| --- | --- |
+| 🟦 **COMMUNITY NOTED AI USE** | The artist is on the community AI-artist list. |
+| 🟥 **YOUTUBE DETECTED AI USE** | YouTube itself labels the song as made with AI. *(coming soon)* |
 
-Apply it together with the official Morphe YouTube Music patches (for sign-in support) on YouTube Music 9.30.53.
+When both apply, only the YouTube tag is shown.
+
+**Where the tag shows:** next to the artist name in song rows, playlists, cards and shelves, the queue, the mini player and the Now Playing screen.
+
+**Where the data comes from:** the community list is
+[CennoxX/spotify-ai-blocker](https://github.com/CennoxX/spotify-ai-blocker), matched by artist name.
+It's downloaded the first time the app opens and refreshed every 24 hours. Nothing else is sent anywhere.
+If an artist is wrongly listed or missing, report it to that project.
+
+## 📲 How to install
+
+1. Tap the button below on your phone, or open Morphe Manager and add `https://github.com/OrangeTree-Dev/Morphe-Patches` under **Sources > +**.
+
+   <a href="https://morphe.software/add-source?github=OrangeTree-Dev/Morphe-Patches">
+     <img src=".github/assets/add-to-morphe.svg" alt="Add to Morphe" height="48">
+   </a>
+
+2. Patch **YouTube Music 9.30.53** and enable **YouTube Music AI Tagger** together with the official Morphe
+   YouTube Music patches (they're needed for signing in).
+3. Install and open the app. Tags appear once the artist list has downloaded, which takes a few seconds on first launch.
+
+Pre-release (dev) builds: enable pre-releases for this source in Morphe Manager.
 
 ## 🩹 Patches list
 
@@ -40,15 +60,20 @@ Apply it together with the official Morphe YouTube Music patches (for sign-in su
 
 <!-- PATCHES_END -->
 
-### 🛠️ Building locally
+## 🐛 Issues
 
-- Run `./gradlew buildAndroid`
-- The built patches .mpp file is found in `patches/build/libs/patches-*.mpp`
-- Patch the mpp file using [Morphe-Desktop](https://github.com/MorpheApp/morphe-desktop)
-  like any other patch bundle.
+Found a bug or a screen where tags don't show? [Open an issue](https://github.com/OrangeTree-Dev/Morphe-Patches/issues).
 
-See the [Morphe documentation](https://github.com/MorpheApp/morphe-documentation) for more information.
+## 🛠️ Building
+
+Push to the `dev` branch and GitHub Actions builds a pre-release; merge `dev` into `main` for a stable release.
+Use [semantic commit](https://kapeli.com/cheat_sheets/Semantic_Commits.docset/Contents/Resources/Documents/index)
+messages (`feat:`, `fix:`, `chore:`). Locally, `./gradlew buildAndroid` builds `patches/build/libs/patches-*.mpp`
+(needs a GitHub token for Morphe's package registry, see the
+[Morphe documentation](https://github.com/MorpheApp/morphe-documentation)).
 
 ## 📜 License
 
-UserXYZ Patches are licensed under the [GNU General Public License v3.0](LICENSE)
+Licensed under the [GNU General Public License v3.0](LICENSE), with the additional terms in [NOTICE](NOTICE).
+Built from the [Morphe patches template](https://github.com/MorpheApp/morphe-patches-template), and the Litho text
+hook is adapted from [Morphe patches](https://github.com/MorpheApp/morphe-patches).
