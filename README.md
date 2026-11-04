@@ -43,6 +43,12 @@ Pre-release (dev) builds: enable pre-releases for this source in Morphe Manager.
 
 <!-- PATCHES_END -->
 
+## ☕ Support
+
+If these patches are useful to you, you can leave a tip on [Ko-fi](https://ko-fi.com/orangetreedev).
+
+<a href="https://ko-fi.com/orangetreedev"><img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support on Ko-fi" height="36"></a>
+
 ## 🐛 Issues
 
 Found a bug, or have an idea for a patch? [Open an issue](https://github.com/OrangeTree-Dev/Morphe-Patches/issues).
