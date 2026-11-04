@@ -6,14 +6,14 @@ YouTube Music only shows its own AI label in a few places. This patch adds a cle
 
 | Tag | Meaning |
 | --- | --- |
-| 🟦 **COMMUNITY NOTED AI USE** | The artist is on the community AI-artist list. |
-| 🟥 **YOUTUBE DETECTED AI USE** | YouTube itself labels the song as made with AI. *(coming soon)* |
+| 🟦 **AI** (blue) | The artist is on the community AI-artist list. |
+| 🟥 **AI** (red) | YouTube itself labels the song as made with AI. *(coming soon)* |
 
 When both apply, only the YouTube tag is shown.
 
 ## Details
 
-**Where the tag shows:** next to the artist name in song rows, playlists, cards and shelves, the queue, the mini player and the Now Playing screen.
+**Where the tag shows:** at the start of the artist line in song rows, playlists, cards and shelves, the queue, the mini player and the Now Playing screen.
 
 **Where the data comes from:** the community list is
 [CennoxX/spotify-ai-blocker](https://github.com/CennoxX/spotify-ai-blocker), matched by artist name.

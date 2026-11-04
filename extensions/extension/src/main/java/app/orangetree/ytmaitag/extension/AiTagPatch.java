@@ -45,7 +45,7 @@ public final class AiTagPatch {
     private static final long LIST_MAX_AGE_MS = 24L * 60 * 60 * 1000;
     private static final String CACHE_FILE = "ytm_ai_tag_artists.csv";
 
-    static final String COMMUNITY_TAG = "COMMUNITY NOTED AI USE";
+    static final String COMMUNITY_TAG = "AI";
     static final int COMMUNITY_COLOR = 0xFF1565C0; // blue
 
     /** Normalized artist name -> original name. Replaced as a whole, never mutated. */
@@ -104,15 +104,14 @@ public final class AiTagPatch {
             }
 
             final String s = text.toString();
-            if (s.contains(COMMUNITY_TAG)) return text;
+            if (s.startsWith(COMMUNITY_TAG + "  ")) return text; // Already tagged.
 
             if (match(s) == null) return text;
 
+            // Tag goes first so it is never cut off by "…" on narrow rows and cards.
             SpannableStringBuilder out = new SpannableStringBuilder(text);
-            out.append("  ");
-            int start = out.length();
-            out.append(COMMUNITY_TAG);
-            out.setSpan(new TagSpan(COMMUNITY_COLOR), start, out.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            out.insert(0, COMMUNITY_TAG + "  ");
+            out.setSpan(new TagSpan(COMMUNITY_COLOR), 0, COMMUNITY_TAG.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
             tagged.incrementAndGet();
             return out;
         } catch (Throwable t) {
