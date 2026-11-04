@@ -66,7 +66,7 @@ public final class AiTagPatch {
     };
 
     // Diagnostics, shown as toasts while the patch is being tested.
-    private static final boolean DIAGNOSTICS = true;
+    private static final boolean DIAGNOSTICS = false;
     private static final AtomicInteger lithoCalls = new AtomicInteger();
     private static final AtomicInteger viewCalls = new AtomicInteger();
     private static final AtomicInteger tagged = new AtomicInteger();
