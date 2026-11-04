@@ -20,7 +20,7 @@ Apply it together with the official Morphe YouTube Music patches (for sign-in su
 ## 🩹 Patches list
 
 <!-- PATCHES_START EXPANDED -->
-> **[v1.0.0-dev.1](https://github.com/OrangeTree-Dev/Morphe-YTMusic-Made-With-AI-Tag/releases/tag/v1.0.0-dev.1)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;1 patches total
+> **[v1.0.0-dev.2](https://github.com/OrangeTree-Dev/Morphe-Patches/releases/tag/v1.0.0-dev.2)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;1 patches total
 <details open>
 <summary>📦 YouTube Music&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>
@@ -34,7 +34,7 @@ Apply it together with the official Morphe YouTube Music patches (for sign-in su
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
 |----------|----------------|-----------|
-| [AI tags](#ai-tags) | Adds a "COMMUNITY NOTED AI USE" tag next to artists on the community AI-artist list (github.com/CennoxX/spotify-ai-blocker), in song rows, cards, the mini player and Now Playing. |  |
+| [YouTube Music AI Tagger](#youtube-music-ai-tagger) | Adds a "COMMUNITY NOTED AI USE" tag next to artists on the community AI-artist list (github.com/CennoxX/spotify-ai-blocker), in song rows, cards, the mini player and Now Playing. |  |
 
 </details>
 
