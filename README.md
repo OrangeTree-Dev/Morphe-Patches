@@ -23,7 +23,7 @@ Pre-release (dev) builds: enable pre-releases for this source in Morphe Manager.
 ## 🎯 Supported app versions
 
 <!-- PATCHES_START EXPANDED -->
-> **[v1.0.0-dev.2](https://github.com/OrangeTree-Dev/Morphe-Patches/releases/tag/v1.0.0-dev.2)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;1 patches total
+> **[v1.0.0-dev.1](https://github.com/OrangeTree-Dev/Morphe-Patches/releases/tag/v1.0.0-dev.1)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;1 patches total
 <details open>
 <summary>📦 YouTube Music&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>
@@ -42,6 +42,12 @@ Pre-release (dev) builds: enable pre-releases for this source in Morphe Manager.
 </details>
 
 <!-- PATCHES_END -->
+
+## ☕ Support
+
+If these patches are useful to you, you can leave a tip on [Ko-fi](https://ko-fi.com/orangetreedev).
+
+<a href="https://ko-fi.com/orangetreedev"><img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support on Ko-fi" height="36"></a>
 
 ## 🐛 Issues
 
