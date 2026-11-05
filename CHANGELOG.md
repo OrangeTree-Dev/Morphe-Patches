@@ -1,3 +1,19 @@
+## [1.26.11.05.0004](https://github.com/OrangeTree-Dev/Morphe-Patches/releases/tag/v1.26.11.05.0004) (2026-11-05)
+
+### ✨ New Features
+
+* Date-based release versions (1.yy.mm.dd.hhmm, betas end in -beta)
+* Short "AI" tag at the start of the artist line
+* Add AI tags patch for YouTube Music
+
+### 🐛 Bug Fixes
+
+* Turn off the test status pop-ups
+* Add on-screen status messages for diagnosing missing tags
+* Remove personal name from bundle info and README
+* Rename bundle to OrangeTree Patches
+* Rename patch to YouTube Music AI Tagger
+
 ## [1.26.11.05.0000-beta](https://github.com/OrangeTree-Dev/Morphe-Patches/releases/tag/v1.26.11.05.0000-beta) (2026-11-05)
 
 ### ✨ New Features
