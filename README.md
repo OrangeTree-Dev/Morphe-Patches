@@ -1,65 +1,40 @@
 # 🍊 OrangeTree Patches
 
-Custom patches for [Morphe](https://morphe.software).
+Small extra patches for the YouTube and YouTube Music Android apps, made for [Morphe](https://morphe.software).
 
 > Unofficial. Not affiliated with Morphe, YouTube or Google.
 
-## 📲 How to use these patches
+## 🧩 What's included
 
-Tap the button below on your phone, or open Morphe Manager and add `https://github.com/OrangeTree-Dev/Morphe-Patches` under **Sources > +**.
+<!-- PATCHES_START -->
+| Patch | App | App version | What it does |
+| --- | --- | --- | --- |
+| [Shorts to Subscriptions](docs/youtube-shorts-to-subscriptions.md) | YouTube | 21.30.216 | Replaces the Shorts button in the bottom navigation bar with a Subscriptions button. |
+| [YouTube Music AI Tagger](docs/youtube-music-ai-tagger.md) | YouTube Music | 9.30.53 | Adds a blue "AI" tag to songs by artists on the community AI-artist list (github.com/CennoxX/spotify-ai-blocker), in song rows, cards, the mini player and Now Playing. |
 
-<a href="https://morphe.software/add-source?github=OrangeTree-Dev/Morphe-Patches">
-  <img src=".github/assets/add-to-morphe.svg" alt="Add to Morphe" height="48">
-</a>
-
-Pre-release (dev) builds: enable pre-releases for this source in Morphe Manager.
-
-## 🧩 Patches
-
-| Patch | App | What it does |
-| --- | --- | --- |
-| [YouTube Music AI Tagger](docs/youtube-music-ai-tagger.md) | YouTube Music | Tags songs made by AI artists everywhere they show up. |
-| [Shorts to Subscriptions](docs/youtube-shorts-to-subscriptions.md) | YouTube | Swaps the Shorts button in the bottom bar for Subscriptions. |
-
-## 🎯 Supported app versions
-
-<!-- PATCHES_START EXPANDED -->
-> **[v1.26.11.05.1732](https://github.com/OrangeTree-Dev/Morphe-Patches/releases/tag/v1.26.11.05.1732)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;2 patches total
-<details open>
-<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
-<br>
-
-**Package name:** `com.google.android.youtube`
-
-**🎯 Supported versions:**
-
-| 21.30.216 |
-| :---: |
-
-| 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
-|----------|----------------|-----------|
-| [Shorts to Subscriptions](#shorts-to-subscriptions) | Replaces the Shorts button in the bottom navigation bar with a Subscriptions button. |  |
-
-</details>
-
-<details open>
-<summary>📦 YouTube Music&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
-<br>
-
-**Package name:** `com.google.android.apps.youtube.music`
-
-**🎯 Supported versions:**
-
-| 9.30.53 |
-| :---: |
-
-| 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
-|----------|----------------|-----------|
-| [YouTube Music AI Tagger](#youtube-music-ai-tagger) | Adds a blue "AI" tag to songs by artists on the community AI-artist list (github.com/CennoxX/spotify-ai-blocker), in song rows, cards, the mini player and Now Playing. |  |
-
-</details>
-
+<sub>Latest release: [v1.26.11.05.1732](https://github.com/OrangeTree-Dev/Morphe-Patches/releases/tag/v1.26.11.05.1732)</sub>
 <!-- PATCHES_END -->
+
+Tap a patch name to read more about it.
+
+## 📲 How to install
+
+1. Install [Morphe Manager](https://morphe.software) on your phone.
+2. Add this source: tap the button below on your phone, or in Morphe Manager go to **Sources > +** and paste `https://github.com/OrangeTree-Dev/Morphe-Patches`.
+
+   <a href="https://morphe.software/add-source?github=OrangeTree-Dev/Morphe-Patches">
+     <img src=".github/assets/add-to-morphe.svg" alt="Add to Morphe" height="48">
+   </a>
+
+3. Turn on **Expert mode** (**Settings > Advanced > Expert mode**). This lets you use these patches together with the official Morphe patches, which you need for signing in.
+4. Pick the app, use the **exact app version** shown in the table above, and turn on the patches you want.
+5. Patch, install, and open the app.
+
+Want to try new patches early? Turn on pre-releases for this source in Morphe Manager.
+
+## 🐛 Problems or ideas
+
+[Open an issue](https://github.com/OrangeTree-Dev/Morphe-Patches/issues) and describe what happened, or what you'd like a patch to do.
 
 ## ☕ Support
 
@@ -67,20 +42,7 @@ If these patches are useful to you, you can leave a tip on [Ko-fi](https://ko-fi
 
 <a href="https://ko-fi.com/orangetreedev"><img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support on Ko-fi" height="36"></a>
 
-## 🐛 Issues
-
-Found a bug, or have an idea for a patch? [Open an issue](https://github.com/OrangeTree-Dev/Morphe-Patches/issues).
-
-## 🛠️ Building
-
-Push to the `dev` branch and GitHub Actions publishes a beta; merge `dev` into `main` (merge commit, no squash) for a stable release.
-Only `feat:`, `fix:` and `perf:` commits make a release, `chore:` commits don't.
-
-Versions are dates and times in UTC: stable releases look like `v1.26.11.05.1432`, betas like `v1.26.11.05.1432-beta`.
-The first number goes up by one when the patches move to a new YouTube Music app version (set `releaseMajor` in `gradle.properties`).
-
 ## 📜 License
 
-Licensed under the [GNU General Public License v3.0](LICENSE), with the additional terms in [NOTICE](NOTICE).
-Built from the [Morphe patches template](https://github.com/MorpheApp/morphe-patches-template), and the Litho text
-hook is adapted from [Morphe patches](https://github.com/MorpheApp/morphe-patches).
+[GPLv3](LICENSE), with the additional terms in [NOTICE](NOTICE). Built from the [Morphe patches template](https://github.com/MorpheApp/morphe-patches-template), and the Litho text hook is adapted from [Morphe patches](https://github.com/MorpheApp/morphe-patches).
+Building and releasing notes are in [docs/developing.md](docs/developing.md).
