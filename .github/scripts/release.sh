@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 # Builds and publishes a release with a date-based version:
-#   stable (main): 1.yy.mm.dd.hhmm        e.g. 1.26.11.05.1432
-#   beta   (dev):  1.yy.mm.dd.hhmm-beta   e.g. 1.26.11.05.1432-beta
-# Time is UTC. Morphe Manager reads patches-bundle.json from main (stable) or dev (beta).
+#   stable (main): N.yy.mm.dd.hhmm        e.g. 1.26.11.05.1432
+#   beta   (dev):  N.yy.mm.dd.hhmm-beta   e.g. 1.26.11.05.1432-beta
+# N is releaseMajor in gradle.properties: raise it by one when the patches move to a
+# new YouTube Music app version. Time is UTC. Morphe Manager reads patches-bundle.json from main (stable) or dev (beta).
 set -euo pipefail
 
 BRANCH="${GITHUB_REF_NAME}"
@@ -14,11 +15,14 @@ case "$BRANCH" in
   *)    echo "Not a release branch: $BRANCH"; echo "published=false" >> "$GITHUB_OUTPUT"; exit 0 ;;
 esac
 
+MAJOR=$(sed -nE 's/^releaseMajor *= *([0-9]+).*/\1/p' gradle.properties)
+MAJOR="${MAJOR:-1}"
+
 # Last release of this channel (tags look like v1.26.11.05.1432 or v1.26.11.05.1432-beta).
 if [ "$BRANCH" = "main" ]; then
-  LAST_TAG=$(git tag --merged HEAD --sort=-creatordate | grep -E '^v1\.[0-9]{2}\.[0-9]{2}\.[0-9]{2}\.[0-9]{4}$' | head -1 || true)
+  LAST_TAG=$(git tag --merged HEAD --sort=-creatordate | grep -E '^v[0-9]+\.[0-9]{2}\.[0-9]{2}\.[0-9]{2}\.[0-9]{4}$' | head -1 || true)
 else
-  LAST_TAG=$(git tag --merged HEAD --sort=-creatordate | grep -E '^v1\.[0-9]{2}\.[0-9]{2}\.[0-9]{2}\.[0-9]{4}(-beta)?$' | head -1 || true)
+  LAST_TAG=$(git tag --merged HEAD --sort=-creatordate | grep -E '^v[0-9]+\.[0-9]{2}\.[0-9]{2}\.[0-9]{2}\.[0-9]{4}(-beta)?$' | head -1 || true)
 fi
 RANGE="${LAST_TAG:+$LAST_TAG..}HEAD"
 
@@ -31,22 +35,27 @@ if [ -z "$CHANGES" ] && ! { [ "$BRANCH" = "main" ] && [ -n "$SUBJECTS" ]; }; the
   exit 0
 fi
 
-VERSION="1.$(date -u +%y.%m.%d.%H%M)${SUFFIX}"
+VERSION="${MAJOR}.$(date -u +%y.%m.%d.%H%M)${SUFFIX}"
 TAG="v${VERSION}"
 echo "Releasing $TAG (changes since ${LAST_TAG:-the start})"
 
 # Release notes, grouped like before.
-notes_section() { # title, regex
+NOTES=""
+add_section() { # title, regex
   local lines
   lines=$(echo "$SUBJECTS" | grep -E "$2" | sed -E 's/^[a-z]+(\(.+\))?!?: /* /' || true)
-  [ -n "$lines" ] && printf '### %s\n\n%s\n\n' "$1" "$lines"
-  return 0
+  if [ -n "$lines" ]; then
+    [ -n "$NOTES" ] && NOTES+=$'\n\n'
+    NOTES+="### $1"$'\n\n'"$lines"
+  fi
 }
-NOTES="$(notes_section '✨ New Features' '^feat')$(notes_section '🔧 Improvements' '^perf')$(notes_section '🐛 Bug Fixes' '^fix')"
-[ -z "$NOTES" ] && NOTES="* Stable release of the latest beta"$'\n'
+add_section '✨ New Features' '^feat'
+add_section '🔧 Improvements' '^perf'
+add_section '🐛 Bug Fixes' '^fix'
+[ -z "$NOTES" ] && NOTES="* Stable release of the latest beta"
 DATE=$(date -u +%Y-%m-%d)
 HEADER="## [${VERSION}](https://github.com/${REPO}/releases/tag/${TAG}) (${DATE})"
-DESCRIPTION="${HEADER}"$'\n\n'"${NOTES%$'\n'}"
+DESCRIPTION="${HEADER}"$'\n\n'"${NOTES}"
 
 # Build.
 sed -i -E "s/^version = .*/version = ${VERSION}/" gradle.properties

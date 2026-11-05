@@ -59,6 +59,7 @@ Push to the `dev` branch and GitHub Actions publishes a beta; merge `dev` into `
 Only `feat:`, `fix:` and `perf:` commits make a release, `chore:` commits don't.
 
 Versions are dates and times in UTC: stable releases look like `v1.26.11.05.1432`, betas like `v1.26.11.05.1432-beta`.
+The first number goes up by one when the patches move to a new YouTube Music app version (set `releaseMajor` in `gradle.properties`).
 
 ## 📜 License
 
