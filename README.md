@@ -19,11 +19,29 @@ Pre-release (dev) builds: enable pre-releases for this source in Morphe Manager.
 | Patch | App | What it does |
 | --- | --- | --- |
 | [YouTube Music AI Tagger](docs/youtube-music-ai-tagger.md) | YouTube Music | Tags songs made by AI artists everywhere they show up. |
+| [Shorts to Subscriptions](docs/youtube-shorts-to-subscriptions.md) | YouTube | Swaps the Shorts button in the bottom bar for Subscriptions. |
 
 ## 🎯 Supported app versions
 
 <!-- PATCHES_START EXPANDED -->
-> **[v1.26.11.05.0004](https://github.com/OrangeTree-Dev/Morphe-Patches/releases/tag/v1.26.11.05.0004)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;1 patches total
+> **[v1.26.11.05.1702-beta](https://github.com/OrangeTree-Dev/Morphe-Patches/releases/tag/v1.26.11.05.1702-beta)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;2 patches total
+<details open>
+<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
+<br>
+
+**Package name:** `com.google.android.youtube`
+
+**🎯 Supported versions:**
+
+| 21.30.216 |
+| :---: |
+
+| 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
+|----------|----------------|-----------|
+| [Shorts to Subscriptions](#shorts-to-subscriptions) | Replaces the Shorts button in the bottom navigation bar with a Subscriptions button. |  |
+
+</details>
+
 <details open>
 <summary>📦 YouTube Music&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>
