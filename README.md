@@ -55,11 +55,10 @@ Found a bug, or have an idea for a patch? [Open an issue](https://github.com/Ora
 
 ## 🛠️ Building
 
-Push to the `dev` branch and GitHub Actions builds a pre-release; merge `dev` into `main` for a stable release.
-Use [semantic commit](https://kapeli.com/cheat_sheets/Semantic_Commits.docset/Contents/Resources/Documents/index)
-messages (`feat:`, `fix:`, `chore:`). Locally, `./gradlew buildAndroid` builds `patches/build/libs/patches-*.mpp`
-(needs a GitHub token for Morphe's package registry, see the
-[Morphe documentation](https://github.com/MorpheApp/morphe-documentation)).
+Push to the `dev` branch and GitHub Actions publishes a beta; merge `dev` into `main` (merge commit, no squash) for a stable release.
+Only `feat:`, `fix:` and `perf:` commits make a release, `chore:` commits don't.
+
+Versions are dates and times in UTC: stable releases look like `v1.26.11.05.1432`, betas like `v1.26.11.05.1432-beta`.
 
 ## 📜 License
 
