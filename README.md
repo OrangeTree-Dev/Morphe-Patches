@@ -19,6 +19,7 @@ Pre-release (dev) builds: enable pre-releases for this source in Morphe Manager.
 | Patch | App | What it does |
 | --- | --- | --- |
 | [YouTube Music AI Tagger](docs/youtube-music-ai-tagger.md) | YouTube Music | Tags songs made by AI artists everywhere they show up. |
+| [Shorts to Subscriptions](docs/youtube-shorts-to-subscriptions.md) | YouTube | Swaps the Shorts button in the bottom bar for Subscriptions. |
 
 ## 🎯 Supported app versions
 
