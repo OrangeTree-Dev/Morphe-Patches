@@ -1,3 +1,7 @@
+## [1.26.11.05.1752](https://github.com/OrangeTree-Dev/Morphe-Patches/releases/tag/v1.26.11.05.1752) (2026-11-05)
+
+* Stable release of the latest beta
+
 ## [1.26.11.05.1732](https://github.com/OrangeTree-Dev/Morphe-Patches/releases/tag/v1.26.11.05.1732) (2026-11-05)
 
 ### ✨ New Features

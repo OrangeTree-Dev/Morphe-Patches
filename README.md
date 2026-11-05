@@ -12,7 +12,7 @@ Small extra patches for the YouTube and YouTube Music Android apps, made for [Mo
 | [Shorts to Subscriptions](docs/youtube-shorts-to-subscriptions.md) | YouTube | 21.30.216 | Replaces the Shorts button in the bottom navigation bar with a Subscriptions button. |
 | [YouTube Music AI Tagger](docs/youtube-music-ai-tagger.md) | YouTube Music | 9.30.53 | Adds a blue "AI" tag to songs by artists on the community AI-artist list (github.com/CennoxX/spotify-ai-blocker), in song rows, cards, the mini player and Now Playing. |
 
-<sub>Latest release: [v1.26.11.05.1732](https://github.com/OrangeTree-Dev/Morphe-Patches/releases/tag/v1.26.11.05.1732)</sub>
+<sub>Latest release: [v1.26.11.05.1752](https://github.com/OrangeTree-Dev/Morphe-Patches/releases/tag/v1.26.11.05.1752)</sub>
 <!-- PATCHES_END -->
 
 Tap a patch name to read more about it.
