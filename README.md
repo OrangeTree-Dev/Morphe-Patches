@@ -24,7 +24,7 @@ Pre-release (dev) builds: enable pre-releases for this source in Morphe Manager.
 ## 🎯 Supported app versions
 
 <!-- PATCHES_START EXPANDED -->
-> **[v1.26.11.05.1702-beta](https://github.com/OrangeTree-Dev/Morphe-Patches/releases/tag/v1.26.11.05.1702-beta)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;2 patches total
+> **[v1.26.11.05.1732](https://github.com/OrangeTree-Dev/Morphe-Patches/releases/tag/v1.26.11.05.1732)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;2 patches total
 <details open>
 <summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>

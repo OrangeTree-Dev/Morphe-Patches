@@ -1,3 +1,9 @@
+## [1.26.11.05.1732](https://github.com/OrangeTree-Dev/Morphe-Patches/releases/tag/v1.26.11.05.1732) (2026-11-05)
+
+### ✨ New Features
+
+* Add Shorts to Subscriptions patch for YouTube
+
 ## [1.26.11.05.1702-beta](https://github.com/OrangeTree-Dev/Morphe-Patches/releases/tag/v1.26.11.05.1702-beta) (2026-11-05)
 
 ### ✨ New Features
