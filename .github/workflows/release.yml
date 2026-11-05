@@ -4,12 +4,16 @@ on:
   workflow_dispatch:
   push:
 
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   release:
     name: Release
     permissions:
       contents: write
-      packages: write
+      packages: read
       id-token: write
       attestations: write
     runs-on: ubuntu-latest
@@ -25,37 +29,27 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v7
-        with:
-          node-version: 'lts/*'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm install
-
-      # Semantic release runs its own Gradle build command.
-      # Only dev and main branch will generate a release as specified by .releaserc
+      # Releases use date-based versions (1.yy.mm.dd.hhmm, betas end in -beta).
+      # Only the main and dev branches publish releases. See .github/scripts/release.sh.
       - name: Release
-        uses: cycjimmy/semantic-release-action@v8
         id: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MORPHE_SIGNING_KEY: ${{ secrets.MORPHE_SIGNING_KEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: .github/scripts/release.sh
 
       - name: Attest
         # Build attestations are only available for public repositories.
-        if: steps.release.outputs.new_release_published == 'true' && !github.event.repository.private
+        if: steps.release.outputs.published == 'true' && !github.event.repository.private
         continue-on-error: true
         uses: actions/attest-build-provenance@v4
         with:
-          subject-name: 'Morphe Patches ${{ steps.release.outputs.new_release_git_tag }}'
+          subject-name: 'OrangeTree Patches ${{ steps.release.outputs.tag }}'
           subject-path: patches/build/libs/patches-*.mpp
 
-      # Always verify compilation when semantic-release did not publish a release.
-      # This covers non-main/dev branches, chore commits, docs commits, etc.
+      # Always verify compilation when no release was published.
       - name: Verify project compiles
-        if: steps.release.outputs.new_release_published != 'true'
+        if: steps.release.outputs.published != 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: ./gradlew :patches:buildAndroid clean --no-daemon
